@@ -11,3 +11,6 @@ By default, this script will save a Rosetta constraint file (Spline function) an
 ```
 --constraints False --graph True
 ```
+
+### Example Files
+The fasta file and *NpzFile* (distribution matrix) of the CASP13 T0957s1 target is being provided for testing.
