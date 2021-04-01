@@ -2,9 +2,9 @@
 """
 Dalton Lab - UNICAMP
 Created on Thu Feb 20 2020
-@author: amanda/fabio
+@author: fabio/amanda
 
-Read trRosetta distance distribution matrix and print/save files or graphs
+Read trRosetta distance distribution matrix and save files or graphs
 """
 
 import os
@@ -40,7 +40,7 @@ parser = argparse.ArgumentParser(description='Convert trRosetta distance matrix 
 parser.add_argument('-n', '--npz', nargs='?', type=str,required=True, help='NpzFile')
 parser.add_argument('-f', '--fasta', nargs='?', type=str,required=True, help='Fasta file')
 parser.add_argument('-t', '--threshold', type=float, nargs='?', help='Minimum threshold (0-1)', default='0.9')
-parser.add_argument('-g', '--graph', type=bool, nargs='?', help='Plot functions(True/False)', default=False)
+parser.add_argument('-g', '--graph', type=bool, nargs='?', help='Save plots (True/False)', default=False)
 parser.add_argument('-c', '--constraints', type=bool, nargs='?', help='Save constraint files (True/False)', default=True)
 parser.add_argument('-a', '--target', type=str,required=True, help='Target name')
 parser.add_argument('-p', '--path', type=str,required=True, help='The full path to the spline files must be specified')
@@ -85,10 +85,9 @@ for idx1, res1 in enumerate(dis):
                         ax2.set_ylabel('Score', color=color)  
                         ax2.plot(xs, pot, color=color, label='Score')
                         ax2.tick_params(axis='y', labelcolor=color)
-                        filename = prefix + '_' + str(idx1) + '_'+ str(idx2)
+                        filename = prefix + '_' + str(idx1+1) + '_'+ str(idx2+1)
                         print(filename)
                         plt.legend()
-                        plt.show()
                         plt.savefig(filename)
                     else:
                         spline = prefix + '_' + str(idx1+1) + '_'+ str(idx2+1)+ '.spline'
@@ -101,7 +100,7 @@ for idx1, res1 in enumerate(dis):
                                 sp.write(x_line + '\n')
                                 sp.write(y_line + '\n')
                                 cst.write('AtomPair CB ' + str(idx1+1) + ' CB ' + str(idx2+1) + \
-                                          ' SPLINE TAG '+ path +'/'+str(prefix)+ \
+                                          ' SPLINE TAG '+ path +'/'
                                           + spline + ' 1.0 1.0 .1\n')
                         else:
                             print(x_line)
