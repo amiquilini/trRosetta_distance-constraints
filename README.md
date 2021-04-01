@@ -14,3 +14,9 @@ By default, this script will save a Rosetta constraint file (Spline function) an
 
 ### Example Files
 The fasta file and *NpzFile* (distribution matrix) of the CASP13 T0957s1 target is being provided for testing.
+
+#### Note
+- Rosetta is freely available to academic laboratories. 
+- Obtaining a license is free for academic users. 
+- Information on how to download and install Rosetta can be found [here](https://www.rosettacommons.org/demos/latest/tutorials/install_build/install_build). 
+- Unfortunately, there is no support for the whole Rosetta on Windows. Dual booting or virtual machines running Linux/MacOS are options.
