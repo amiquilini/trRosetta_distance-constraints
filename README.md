@@ -20,3 +20,5 @@ The fasta file and *NpzFile* (distribution matrix) of the CASP13 T0957s1 target 
 - Obtaining a license is free for academic users. 
 - Information on how to download and install Rosetta can be found [here](https://www.rosettacommons.org/demos/latest/tutorials/install_build/install_build). 
 - Unfortunately, there is no support for the whole Rosetta on Windows. Dual booting or virtual machines running Linux/MacOS are options.
+
+###### For bugs and suggestions, you can reach me by <a href="mailto:amiquilini@id.uff.br?subject=Github%20Contact">E-mail</a>
