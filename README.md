@@ -7,7 +7,7 @@ This script uses the ***trRosetta*** inter-residue contacts/distances/orientatio
 ```
 python3 ./npz_converter.py --npz file.npz --fasta file.fasta --threshold 0.9 --target 'target_name' --path 'path'
 ```
-By default, this script will save a Rosetta constraint file (Spline function) and spline files for all residue pairs inside the threshold (0.9 by default, but customizable) in the specified path. The spline files must remain in the path passed as argument because the path is specified in the constraint file for each spline file. Optional arguments to plot/save the spline function and not saving the constraint/spline files are available:
+By default, this script will save a Rosetta constraint file (Spline function) and spline files for all residue pairs inside the threshold (0.9 by default, but customizable) in the specified path. The spline files must remain in the path passed as argument because the path is specified in the constraint file for each spline file. Optional arguments to save the spline function plots and not saving the constraint/spline files are available:
 ```
 --constraints False --graph True
 ```
